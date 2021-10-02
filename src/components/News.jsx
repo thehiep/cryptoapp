@@ -8,7 +8,7 @@ import Loader from "./Loader";
 const { Text, Title } = Typography;
 const News = ({ simplified }) => {
   const [newsCategory, setnewsCategory] = useState("Cryptocurrency");
-  const { data: cryptosList, isFetching } = useGetCryptosQuery(100);
+  const { data: cryptosList } = useGetCryptosQuery(100);
 
   const { data: cryptoNews } = useGetCryptoNewsQuery({
     newsCategory: newsCategory,
